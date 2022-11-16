@@ -78,7 +78,7 @@ def sendEmail(to, content):
 
 def screenshot():
     img = pyautogui.screenshot()
-    img.saver("D:\Symbiosis\Semister IV.png")
+    img.saver("path_of_folder_where_you_can_save_ss")
 
 def cpu():
     usage = str(psutil.cpu_percent())
@@ -131,7 +131,7 @@ if __name__ == '__main__':
         elif "search in chrome" in query:
             speak("What should I search?")
             print("What should I search?")
-            chromepath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe %s"
+            chromepath = "cromepath_on_your_system"
             search = takecommand().lower()
             wb.get(chromepath).open_new_tab(search + ".com")
 
@@ -145,7 +145,7 @@ if __name__ == '__main__':
             os.system("shutdown /r /t 1")
 
         elif "play songs" in query:
-            songs_dir = "D:\\songs"
+            songs_dir = "musicpath"
             songs = os.listdir(songs_dir)
             os.startfile(os.path.join(songs_dir, songs[0]))
 
